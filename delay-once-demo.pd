@@ -1,0 +1,19 @@
+#N canvas 726 410 642 462 10;
+#X obj 99 119 source-amen;
+#X obj 235 357 dac~;
+#X obj 91 89 bng 15 250 50 0 empty empty start_music 17 7 0 10 -262144
+-1 -1;
+#X obj 292 124 nbx 5 14 -1e+37 1e+37 0 1 empty empty cutoff_freq. 0
+-8 0 10 -262144 -1 -1 3000 256;
+#X obj 229 124 nbx 5 14 -1e+37 1e+37 0 1 empty empty delay_ms 0 -8
+0 10 -262144 -1 -1 500 256;
+#X obj 251 187 delay-once~;
+#X obj 388 125 hsl 128 15 0 1 0 1 empty empty wet -2 -8 0 10 -262144
+-1 -1 12700 1;
+#X connect 0 0 5 0;
+#X connect 2 0 0 0;
+#X connect 3 0 5 2;
+#X connect 4 0 5 1;
+#X connect 5 0 1 0;
+#X connect 5 0 1 1;
+#X connect 6 0 5 3;
