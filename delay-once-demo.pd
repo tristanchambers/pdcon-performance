@@ -1,5 +1,5 @@
 #N canvas 726 410 642 462 10;
-#X obj 99 119 source-amen;
+#X obj 99 119 source-amen~;
 #X obj 235 357 dac~;
 #X obj 91 89 bng 15 250 50 0 empty empty start_music 17 7 0 10 -262144
 -1 -1;
