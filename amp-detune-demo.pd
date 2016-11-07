@@ -1,0 +1,10 @@
+#N canvas 584 369 450 300 10;
+#X obj 116 116 amp-detune~;
+#X obj 117 79 source-amen~;
+#X obj 115 167 dac~;
+#X obj 117 59 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 0 0 2 0;
+#X connect 0 0 2 1;
+#X connect 1 0 0 0;
+#X connect 3 0 1 0;
