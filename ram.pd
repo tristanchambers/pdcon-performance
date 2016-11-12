@@ -1,0 +1,35 @@
+#N canvas 971 327 739 609 10;
+#X obj 452 379 soundfiler;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array mysample 44100 float 2;
+#X coords 0 1 44100 -1 200 140 1;
+#X restore 429 152 graph;
+#X msg 452 325 read -resize amen.wav mysample \;;
+#X obj 450 438 print;
+#X obj 459 408 f;
+#X obj 212 236 tabread4~ mysample;
+#X obj 64 62 receive notes;
+#X obj 213 265 dac~;
+#X obj 210 178 +~;
+#X obj 515 38 catch~ sound;
+#X obj 415 87 tabwrite~ mysample;
+#X obj 397 52 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 434 28 stop;
+#X obj 74 217 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 34922.8 256;
+#X obj 71 104 * 200;
+#X obj 246 114 *~ 22100;
+#X obj 244 85 phasor~ 2;
+#X connect 0 0 3 0;
+#X connect 0 0 4 0;
+#X connect 2 0 0 0;
+#X connect 5 0 7 0;
+#X connect 6 0 14 0;
+#X connect 9 0 10 0;
+#X connect 11 0 10 0;
+#X connect 12 0 10 0;
+#X connect 14 0 8 0;
+#X connect 14 0 13 0;
+#X connect 15 0 8 1;
+#X connect 16 0 15 0;

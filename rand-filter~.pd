@@ -1,0 +1,27 @@
+#N canvas 571 392 640 300 10;
+#X obj 195 72 metro 100;
+#X obj 195 45 loadbang;
+#X obj 206 151 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 459 256;
+#X obj 113 88 inlet~;
+#X obj 165 248 outlet~;
+#X obj 283 45 inlet;
+#X obj 195 99 random 1000;
+#X obj 195 172 lop~ 100;
+#X obj 195 125 + 450;
+#X obj 333 45 inlet;
+#X obj 383 45 inlet;
+#X obj 280 70 expr 1000/$f1;
+#X obj 165 208 vcf~ 15;
+#X connect 0 0 6 0;
+#X connect 1 0 0 0;
+#X connect 3 0 12 0;
+#X connect 5 0 11 0;
+#X connect 6 0 8 0;
+#X connect 7 0 12 1;
+#X connect 8 0 2 0;
+#X connect 8 0 7 0;
+#X connect 9 0 6 1;
+#X connect 10 0 8 1;
+#X connect 11 0 0 1;
+#X connect 12 0 4 0;
