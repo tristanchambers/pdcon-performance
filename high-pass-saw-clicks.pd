@@ -1,0 +1,18 @@
+#N canvas 779 225 956 698 10;
+#X obj 190 186 svf~, f 26;
+#X obj 319 123 hsl 128 15 100 12700 1 1 empty empty empty -2 -8 0 10
+-262144 -1 -1 5200 1;
+#X obj 466 123 hsl 128 15 0 1 0 1 empty empty empty -2 -8 0 10 -262144
+-1 -1 3400 1;
+#X obj 237 397 dac~;
+#X obj 181 313 tristans-hacks/reverb;
+#X obj 189 158 new-primatives/saw~ 20;
+#X connect 0 1 3 0;
+#X connect 0 1 3 1;
+#X connect 0 1 4 0;
+#X connect 0 1 4 1;
+#X connect 1 0 0 1;
+#X connect 2 0 0 2;
+#X connect 4 0 3 0;
+#X connect 4 1 3 1;
+#X connect 5 0 0 0;
