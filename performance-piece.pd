@@ -1,75 +1,94 @@
-#N canvas 119 81 1301 687 12;
+#N canvas 75 81 1301 687 12;
 #X floatatom 117 19 5 0 0 0 - - -, f 5;
 #X obj 351 632 dac~;
-#X obj 310 174 context :Z 8 :a ' # = & x- (?7) & y- (?7) & r (?100
-- 50) 2000 | # = | ' :d 2 :e 2 :h 1 :i 0 0 -6 -2 11 :j 2 16 0 :n '
-cz ' :p -1 :R 63.36 :x 1 3 4 5 :y 1 2 :ID 1;
-#X obj 117 47 cz-synth cz 54 3 1 1 76 83 20 2 1;
-#X obj 395 220 context :X 9 :Z 12 :a ' # = | ' :d 1 :e 1 :f 1 :h 1
-:i 0 -14 -13 0 -11 0 -10 0 0 :j 3 4 5 :n ' ks ' :p -1 :P 1 :x 2 3 5
-7 :y 1 2 3 :ID 2;
-#X obj 876 190 ks2 ks 36 5.01187 0 58 0 68 0 95.2796 0 5.7544 0 37.17
-1.5 53 54 0 90;
-#X obj 395 285 context :X 9 :Z 12 :a ' # = | ' :d 1 :e 1 :f 1 :i -11
--6 -13 -14 -4 -14 -3 0 1 :n ' ks ' :x 1 3 4 6 9 :ID 3;
-#X obj 393 353 context :X 9 :Z 12 :a ' # = | ' :d 1 :e 1 :i -11 0 -13
--11 15 -11 0 0 1 :n ' ks ' :x 1 3 4 5 6 9 :ID 4;
-#X obj 393 424 context :X 9 :Z 12 :a ' # = | ' :d 1 :e 1 :i -11 0 -13
--11 15 -7 0 0 1 :j 0 13 0 :n ' ks ' :x 1 3 4 5 6 9 :ID 5;
-#X msg 498 52 context :X 9 :Z 12 :a ' # = | ' :d 2 :e 1 :i -4 0 -6
+#X obj 254 136 context :Z 8 :a ' # = & x- (?7) & y- (?7) & r (?100
+- 50) 2000 | # = | ' :c 2 :d 2 :e 2 :f 1 :h 1 :i 0 0 -6 -2 11 :j 2
+16 0 :n ' cz ' :p -1 :R 63.36 :x 1 3 4 :ID 1;
+#X obj 117 47 cz-synth cz 54 3 3 2 64 83 20 39 1;
+#X obj 395 260 context :X 9 :Z 12 :a ' # = | ' :c 13 :d 1 :e 1 :f 1
+:h 1 :i 0 -14 -13 0 -11 0 -10 0 0 :j 3 4 5 :n ' ks ' :p -1 :P 1 :x
+2 3 5 7 :y 1 2 3 :ID 2;
+#X obj -118 169 ks2 ks 36 5.01187 43 88 0 62 -44 34.5939 12 5.49541
+0 63.17 1.5 0 80 2 90;
+#X obj 395 325 context :X 9 :Z 12 :a ' # = | ' :c 13 :d 1 :e 1 :f 1
+:i -11 -6 -13 -14 -4 -14 -3 0 1 :n ' ks ' :x 1 3 4 6 :ID 3;
+#X obj 393 393 context :X 9 :Z 12 :a ' # = | ' :c 13 :d 1 :e 1 :f 1
+:i -11 0 -13 -11 15 -11 0 0 1 :n ' ks ' :x 1 3 4 6 :ID 4;
+#X obj 393 464 context :X 9 :Z 12 :a ' # = | ' :c 13 :d 1 :e 1 :f 1
+:i -11 0 -13 -11 15 -7 0 0 1 :j 0 13 0 :n ' ks ' :x 1 3 4 6 :ID 5;
+#X msg 519 -7 context :X 9 :Z 12 :a ' # = | ' :d 2 :e 1 :i -4 0 -6
 -4 0 -4 0 0 0 :n ' ks ' :x 1 3 4 6;
-#X obj 271 251 context :X 8 :M 1 :a ' # 13 | ' :b ' # 13 | ' :d 1 :e
-7 :f 5 :h 1 :i 0 -14 0 21 17 0 24 0 :n ' ks ' :p -1 :z 0 :R 63.36 :x
-1 2 3 4 5 6 7 :ID 6;
-#X obj 248 392 context :a ' # = | ' :d 0.5 :e 1 :f 1 :i 0 -2 -6 0 1
-:n ' cz ' :x 2 3 5 :ID 7;
-#X obj 259 317 context :d 1.5 :h 1 :j 7 9 0 :p -1 :R 63.36 :y 1 2 :ID
-8;
-#X obj 278 472 context :a ' # = | # = | ' :d 0.5 :e 1 :f 1 :i -2 0
--6 0 1 :n ' cz ' :x 1 3 5 :ID 9;
-#X floatatom 359 125 5 0 0 0 - - -, f 5;
-#X obj 658 368 context :a ' # = | # = | ' :d 1.5 :e 1 :h 1 :i 0 -6
--2 0 15 :j 12 0 0 :n ' bass ' :p -1 :D 2 :E 1 :R 63.36 :x 2 3 :ID 10
-;
-#X obj 663 277 context :X 6 :M 1 :a ' | ' :b ' -- bass- o (?100) |
-' :e 3 :f 4 :h 1 :i 0 10 12 17 0 0 :p -1 :z 0 :R 63.36 :x 1 2 3 5 :ID
-11;
-#X obj 730 364 context :a ' # = | # = | ' :d 1.5 :e 1 :h 1 :i 0 0 -2
--6 10 :j 10 0 0 :n ' bass ' :p -1 :D 2 :E 1 :R 63.36 :x 3 4 :ID 12
-;
-#X obj 753 517 context :a ' # = | # = | ' :d 0.5 :e 1 :i 0 -6 -2 0
-10 :n ' bass ' :x 1 2 3 :ID 13;
-#X obj 829 521 context :a ' # = | # = | ' :d 0.5 :e 1 :i -6 -2 -6 0
-10 :n ' bass ' :x 1 2 3 :ID 14;
-#X obj 775 454 context :M 1 :h 1 :i 13 14 0 0 0 :p -1 :z 0 :P 1 :x
+#X obj 256 406 context :X 8 :M 1 :a ' # 13 | ' :b ' # 13 | ' :e 7 :f
+5 :h 1 :i 8 -14 0 0 17 0 24 0 :n ' ks ' :p -1 :z 0 :R 63.36 :x 1 2
+3 4 6 7 :ID 6;
+#X obj 242 301 context :a ' # = | ' :c 2 :d 0.5 :e 1 :f 1 :i 0 -2 -6
+0 1 :n ' cz ' :x 2 3 :ID 7;
+#X obj 273 244 context :c 2 :d 1.5 :e 1 :f 1 :h 1 :j 7 9 0 :p -1 :R
+63.36 :y 1 2 :ID 8;
+#X obj 307 301 context :a ' # = | # = | ' :c 2 :d 0.5 :e 1 :f 1 :i
+-2 0 -6 0 1 :n ' cz ' :x 1 3 :ID 9;
+#X floatatom 18 150 5 0 0 0 - - -, f 5;
+#X obj 665 364 context :Y 6 :a ' # = | # = | ' :c 4 :d 1.5 :e 1 :f
+1 :h 1 :i 0 -6 -2 -4 16 :j 14 0 13 :n ' bass ' :p -1 :D 2 :E 1 :R 63.36
+:x 1 2 3 :y 1 2 3 4 5 :ID 10;
+#X obj 688 307 context :X 7 :M 1 :a ' | ' :b ' -- bass- o (?100) |
+' :c 4 :e 3 :f 4 :h 1 :i 0 10 12 17 13 14 0 :p -1 :z 0 :R 63.36 :x
+1 2 3 5 6 :ID 11;
+#X obj 730 364 context :Y 6 :a ' # = | # = | ' :c 4 :d 1.5 :e 1 :f
+1 :h 1 :i 0 0 -2 -6 20 :j 13 0 10 :n ' bass ' :p -1 :D 2 :E 1 :R 63.36
+:x 1 3 4 :y 1 2 3 4 5 :ID 12;
+#X obj 664 453 context :Y 6 :a ' # = | # = | ' :b ' | # = | ' :c 4
+:d 1.5 :e 1 :f 1 :h 1 :i 0 -3 -2 0 0 :j 10 0 -28 :n ' bass ' :p -1
+:D 2 :E 1 :R 63.36 :x 1 2 3 :y 1 2 3 4 5 :ID 13;
+#X obj 732 453 context :Y 6 :a ' # = | # = | ' :b ' # 1 | ' :c 4 :d
+1.5 :e 1 :f 6 :h 1 :i -6 -2 -6 0 0 :j 12 0 14 :n ' bass ' :p -1 :D
+2 :E 1 :R 63.36 :x 1 2 3 :y 1 2 3 4 5 :ID 14;
+#X obj 907 526 context :M 1 :h 1 :i 13 14 0 0 0 :p -1 :z 0 :P 1 :x
 1 2 3 :ID 15;
-#X obj 396 158 context :X 9 :Z 12 :a ' # = | ' :d 1 :e 1 :f 1 :h 1
-:i -4 -14 0 -13 -11 0 -11 0 17 :j 3 4 5 :n ' ks ' :p -1 :P 1 :x 2 4
-5 7 :y 1 2 3 :ID 16;
-#X obj 323 44 scaler locrian c 3;
-#X obj 876 333 throw~ out;
+#X obj 396 198 context :X 9 :Z 12 :a ' # = | ' :c 13 :d 1 :e 1 :f 1
+:h 1 :i -4 -14 0 -13 -11 0 -11 0 17 :j 3 4 5 :n ' ks ' :p -1 :P 1 :x
+2 4 5 7 :y 1 2 3 :ID 16;
+#X obj -18 69 scaler locrian c 3;
+#X obj -118 312 throw~ out;
 #X obj 66 591 throw~ out;
-#X obj 847 360 throw~ feed;
+#X obj -147 339 throw~ feed;
 #X obj 46 619 throw~ feed;
 #X obj 359 602 catch~ out;
-#X obj 528 658 throw~ out;
-#X obj 613 478 catch~ feed;
+#X obj 528 718 throw~ out;
+#X obj 708 533 catch~ feed;
 #X obj 118 181 throw~ out;
 #X obj 98 209 throw~ feed;
-#X obj 529 505 stutter feedback 81 87 50.1187 6.60693 0;
-#X obj 88 275 bass~ bass 54 39 54.91 40;
-#X obj 860 440 context :X 17 :Z 12 :a ' # 0 | ' :d 2 :e 1 :f 1 :h 1
+#X obj 529 565 stutter feedback 81 87 50.1187 6.60693 0;
+#X obj 88 275 bass~ bass 86 17 54.91 40;
+#X obj 920 616 context :X 17 :Z 12 :a ' # 0 | ' :d 2 :e 1 :f 1 :h 1
 :j 17 0 0 :n ' bass ' :p -1 :R 63.36 :x 1 2 4 6 8 12 13 15 :y 1 2 3
 :ID 17;
-#X msg 612 195 \; c-all stop;
-#X obj 324 317 context :a ' # = | ' :d 2 :e 1 :f 1 :i 0 0 -9 -4 18
+#X msg 30 98 \; c-all stop;
+#X obj 276 474 context :a ' # = | ' :d 2 :e 1 :f 1 :i 0 0 -9 -4 18
 :n ' cz ' :x 3 4 :ID 18;
-#X obj 443 497 context :M 1 :e 1 :f 1 :h 1 :p -1 :z 0 :R 63.36 :x 1
-2 3 4 :ID 19;
-#X obj 4 425 stutter feedback2 67 35 1 23.9883 1.8197 0 0 0 0 17.378
-;
-#X obj 625 504 stutter feedback3 77 71 13.1826 1.90546 0;
-#X obj 955 556 context :H 36 :X 9 :Y 5 :Z 12 :a ' | ' :c 6 :d 0.29
+#X obj 873 360 context :H 36 :X 7 :Y 5 :a ' -- c19 start | ' :d 1 :e
+1 :f 1 :h 1 :p -1 :z 0 :R 63.36 :x 1 2 3 4 5 6 :ID 30 6 obj -35 -93
+list split 1 11 obj -1 -65 ols \$1 inlet outlet-x outlet-y mouse settings
+cutsom 10 obj 361 -103 presets \$1 :x :y :d :a :b 117 obj 0 4 content
+:H 11 :x1 0 :x2 0.000972222 :y1 8.33334e-05 :y2 0.000708333 :y 1 0
+0.177804 0.177804 0.311136 0.277803 0.277803 0.273636 0.26947 0.265303
+0.261136 0.25697 0.252803 0.248637 0.24447 0.24447 0.24447 0.24447
+0.24447 0.24447 0.250025 0.255581 0.261136 0.266692 0.272247 0.277803
+0.311136 0.311136 0.311136 0.311136 0.311136 0.311136 0.311136 0.311136
+0.311136 0.311136 0.311136 0.311136 0.311136 0.311136 0.311136 0.344468
+0.344468 0.352802 0.361135 0.369468 0.377801 0.388912 0.400023 0.411134
+0.411134 0.411134 0.422245 0.433356 0.444467 0.444467 0.444467 0.444467
+0.444467 0.4778 0.4778 0.511133 0.515894 0.520656 0.525418 0.53018
+0.534942 0.539704 0.544465 0.577798 0.577798 0.577798 0.611131 0.611131
+0.611131 0.627797 0.644464 0.644464 0.644464 0.644464 0.644464 0.644464
+0.644464 0.644464 0.644464 0.677797 0.711129 0.711129 0.711129 0.711129
+0.711129 0.711129 0.727796 0.744462 0.761129 0.777795 0.777795 0.777795
+0.844461 0.777795 0.777795 0.811128 4 obj 0 -20 mover 5 obj 9 77 send~
+snap 5 connect 0 0 1 0 5 connect 0 1 2 1 5 connect 0 2 2 2 5 connect
+0 3 2 3 5 connect 0 4 2 4 5 connect 1 1 2 0 5 connect 4 0 6 0;
+#X obj 4 425 stutter feedback2 21 35 1 23.9883 1.8197;
+#X obj 625 564 stutter feedback3 77 71 13.1826 1.38038 0;
+#X obj 807 285 context :H 36 :X 9 :Y 5 :Z 12 :a ' | ' :c 6 :d 0.29
 :e 1 :f 1 :i 0 0 0 0 0 0 0 0 20 :n ' congas- ' :ID 22 6 obj -35 -93
 list split 1 11 obj -1 -65 ols \$1 inlet outlet-x outlet-y mouse settings
 cutsom 9 obj 361 -103 presets \$1 :x :y :d :m 15 obj 0 19 content :l
@@ -77,32 +96,34 @@ waves/lo-bongo.wav :x2 0.00029 :y1 0.000116 :y2 0.00029 :y -1 2 5 obj
 47 83 throw~ samples 5 connect 0 0 1 0 5 connect 0 1 2 1 5 connect
 0 2 2 2 5 connect 0 3 2 3 5 connect 0 4 2 4 5 connect 1 1 2 0 5 connect
 4 0 5 0;
-#X obj 1072 554 context :H 36 :X 9 :Y 5 :Z 12 :a ' | ' :c 6 :d 0.3
-:e 1 :f 1 :i 0 0 0 0 0 0 0 0 18 :n ' congas- ' :ID 23 6 obj -35 -93
-list split 1 11 obj -1 -65 ols \$1 inlet outlet-x outlet-y mouse settings
+#X obj 924 284 context :H 36 :X 9 :Y 5 :Z 12 :a ' | ' :c 6 :d 0.3 :e
+1 :f 1 :i 0 0 0 0 0 0 0 0 18 :n ' congas- ' :ID 23 6 obj -35 -93 list
+split 1 11 obj -1 -65 ols \$1 inlet outlet-x outlet-y mouse settings
 cutsom 9 obj 361 -103 presets \$1 :x :y :d :m 15 obj 0 19 content :l
 waves/lo-conga.wav :x2 0.0003 :y1 0.00012 :y2 0.0003 :y -1 2 5 obj
 47 83 throw~ samples 5 connect 0 0 1 0 5 connect 0 1 2 1 5 connect
 0 2 2 2 5 connect 0 3 2 3 5 connect 0 4 2 4 5 connect 1 1 2 0 5 connect
 4 0 5 0;
-#X obj 1095 474 context :d 0.5 :e 1 :f 1 :i 0 0 23 22 21 :x 3 4 :ID
+#X obj 874 220 context :d 0.46 :e 1 :f 1 :i 0 23 22 0 21 :x 2 3 :ID
 21;
 #X obj 268 572 catch~ samples;
 #X obj 268 596 *~ 2;
-#X obj 857 123 context :H 38 :X 9 :Y 5 :Z 12 :a ' | ' :c 6 :d 2 :e
-1 :f 1 :i 0 0 0 0 0 0 0 0 20 :n ' congas- ' :I 28 :ID 23 6 obj -35
+#X obj 530 242 context :H 38 :X 9 :Y 5 :Z 12 :a ' | ' :c 6 :d 1.85
+:e 1 :f 1 :i 0 0 0 0 0 0 0 0 20 :n ' congas- ' :I 28 :ID 25 6 obj -35
 -93 list split 1 11 obj -1 -65 ols \$1 inlet outlet-x outlet-y mouse
 settings cutsom 9 obj 361 -103 presets \$1 :x :y :d :m 15 obj 0 19
-content :l waves/uhu.wav :x2 0.002 :y1 0.0008 :y2 0.002 :y -1 2 5 obj
-47 83 throw~ samples 5 connect 0 0 1 0 5 connect 0 1 2 1 5 connect
-0 2 2 2 5 connect 0 3 2 3 5 connect 0 4 2 4 5 connect 1 1 2 0 5 connect
-4 0 5 0;
-#X obj 524 106 context :X 20 :a ' -- c24 stop - | ' :b ' \\\; \\\;
-\\\; \\\; ' :d 1.5 :e 1 :f 1 :h 1 :j 7 9 0 :p -1 :P 1 :x 2 :y 1 2 :ID
-24;
-#X obj 20 269 print to;
-#X obj 20 245 receive c24;
-#X msg 904 -12 context :H 36 :X 9 :Y 5 :Z 12 :a ' | ' :c 6 :d 0.29
+content :l waves/uhu.wav :x2 0.00185 :y1 0.00074 :y2 0.00185 :y -1
+2 5 obj 47 83 throw~ samples 5 connect 0 0 1 0 5 connect 0 1 2 1 5
+connect 0 2 2 2 5 connect 0 3 2 3 5 connect 0 4 2 4 5 connect 1 1 2
+0 5 connect 4 0 5 0;
+#X obj 602 67 context :H 70 :X 20 :Z 24 :a ' -- c24 stop - | -- c24
+stop - 29 | ' :b ' | ' :d 1.5 :e 3 :f 1 :h 1 :i 0 0 0 0 0 0 20 0 0
+0 0 0 0 0 0 0 0 0 0 0 :j 7 9 0 :p -1 :P 1 :x 2 3 4 :y 1 2 :ID 24 6
+obj -35 -93 list split 1 11 obj -1 -65 ols \$1 inlet outlet-x outlet-y
+mouse settings cutsom 10 obj 361 -103 presets \$1 :x :y :d :a :b 5
+connect 0 0 1 0 5 connect 0 1 2 1 5 connect 0 2 2 2 5 connect 0 3 2
+3 5 connect 0 4 2 4 5 connect 1 1 2 0;
+#X msg 965 -64 context :H 36 :X 9 :Y 5 :Z 12 :a ' | ' :c 6 :d 0.29
 :e 1 :f 1 :i 0 0 0 0 0 0 0 0 20 :n ' congas- ' :ID 24 6 obj -35 -93
 list split 1 11 obj -1 -65 ols \$1 inlet outlet-x outlet-y mouse settings
 cutsom 9 obj 361 -103 presets \$1 :x :y :d :m 15 obj 0 19 content :l
@@ -110,38 +131,88 @@ waves/slap.aiff :x2 0.00029 :y1 0.000116 :y2 0.00029 :y -1 2 5 obj
 47 83 throw~ samples 5 connect 0 0 1 0 5 connect 0 1 2 1 5 connect
 0 2 2 2 5 connect 0 3 2 3 5 connect 0 4 2 4 5 connect 1 1 2 0 5 connect
 4 0 5 0;
-#X obj 734 204 context :H 36 :X 9 :Y 5 :Z 12 :a ' | ' :c 6 :d 0.29
-:e 1 :f 1 :i 0 0 0 0 0 0 0 0 20 :n ' congas- ' :ID 24 6 obj -35 -93
+#X obj 728 211 context :H 26 :X 11 :Y 5 :Z 12 :a ' | ' :c 6 :d 2 :e
+1 :f 1 :n ' congas- ' :ID 26 6 obj -35 -93 list split 1 11 obj -1 -65
+ols \$1 inlet outlet-x outlet-y mouse settings cutsom 9 obj 361 -103
+presets \$1 :x :y :d :m 17 obj 18 19 content :l waves/slap.aiff :x1
+0.0003 :x2 0.002 :y1 0.0008 :y2 0.002 :y -1 2 5 obj 47 83 throw~ samples
+4 obj 0 -20 mover 5 connect 0 0 1 0 5 connect 0 1 2 1 5 connect 0 2
+2 2 5 connect 0 3 2 3 5 connect 0 4 2 4 5 connect 1 1 2 0 5 connect
+4 0 5 0;
+#X obj 766 149 context :M 1 :e 1 :f 1 :h 1 :i 0 0 0 30 0 :p -1 :z 0
+:P 1 :x 2 :ID 20;
+#X obj 546 482 context :X 8 :M 1 :e 1 :f 1 :h 1 :p -1 :z 0 :R 63.36
+:x 1 2 3 4 5 :ID 23;
+#X obj 728 565 stutter feedback4 83 88 9.12011 33.1131 0;
+#X obj 311 46 context :X 7 :M 1 :d 4 :e 1 :f 1 :i 1 0 11 17 31 0 29
+:z 0 :x 2 3 5 6 7 :ID 29;
+#X obj 424 48 context :M 1 :d 2 :e 1 :f 1 :i 28 11 6 0 0 :z 0 :x 1
+2 3 :ID 27;
+#X text 277 21 master clock;
+#X text 402 22 2 second delay;
+#X obj 408 136 context :X 6 :M 1 :c 13 :e 1 :f 1 :h 1 :i 2 16 2 25
+0 0 :p -1 :z 0 :P 1 :x 1 2 3 4 :ID 28;
+#X text 271 118 core bassline;
+#X text 404 116 ks selector;
+#X floatatom 205 414 5 0 0 0 - - -, f 5;
+#X msg 205 435 :o \$1;
+#X floatatom 519 139 5 0 0 0 - - -, f 5;
+#X msg 519 160 :o \$1;
+#X text 266 218 cz ending;
+#X msg 526 105 :c \$1;
+#X floatatom 523 71 5 0 0 0 - - -, f 5;
+#X text 185 386 random consequence selector;
+#X text 675 285 bassline selector;
+#X obj 205 3 s startbang;
+#X text 658 42 allstop;
+#X text 739 123 percussion selector;
+#X obj 870 431 context :H 36 :X 9 :Y 5 :Z 12 :a ' | ' :c 6 :d 0.29
+:e 1 :f 1 :i 0 0 0 0 0 0 0 0 20 :n ' congas- ' :ID 19 6 obj -35 -93
 list split 1 11 obj -1 -65 ols \$1 inlet outlet-x outlet-y mouse settings
 cutsom 9 obj 361 -103 presets \$1 :x :y :d :m 15 obj 0 19 content :l
-waves/slap.aiff :x2 0.00029 :y1 0.000116 :y2 0.00029 :y -1 2 5 obj
-47 83 throw~ samples 5 connect 0 0 1 0 5 connect 0 1 2 1 5 connect
-0 2 2 2 5 connect 0 3 2 3 5 connect 0 4 2 4 5 connect 1 1 2 0 5 connect
-4 0 5 0;
+waves/snap.wav :x2 0.00029 :y1 0.000116 :y2 0.00029 :y -1 2 5 obj 62
+110 throw~ samples 5 obj 126 44 receive~ snap 4 obj 61 81 *~ 5 connect
+0 0 1 0 5 connect 0 1 2 1 5 connect 0 2 2 2 5 connect 0 3 2 3 5 connect
+0 4 2 4 5 connect 1 1 2 0 5 connect 4 0 7 0 5 connect 6 0 7 1 5 connect
+7 0 5 0;
+#X text 117 528 cz ending \, ks intro \, cz outro \, nil \, long bass
+\, nil \, allstop.;
+#X obj 320 135 context :a ' # = | ' :c 2 :d 2 :e 1 :f 1 :i -2 0 0 -3
+0 :n ' cz ' :x 1 3 4 :ID 31;
 #X connect 0 0 3 0;
-#X connect 2 0 16 1;
-#X connect 2 2 16 2;
-#X connect 2 2 10 1;
 #X connect 3 0 30 0;
 #X connect 3 0 31 0;
 #X connect 5 0 23 0;
 #X connect 5 0 25 0;
-#X connect 8 5 37 1;
-#X connect 10 0 12 2;
+#X connect 8 5 50 2;
 #X connect 10 2 36 1;
-#X connect 16 0 32 0;
+#X connect 16 0 50 1;
 #X connect 27 0 1 0;
 #X connect 27 0 1 1;
 #X connect 29 0 32 1;
 #X connect 29 0 39 1;
+#X connect 29 0 51 1;
 #X connect 32 0 28 0;
 #X connect 33 0 38 1;
-#X connect 36 3 37 1;
-#X connect 37 0 39 0;
+#X connect 36 3 50 1;
 #X connect 38 0 24 0;
 #X connect 38 0 26 0;
 #X connect 39 0 28 0;
 #X connect 43 0 44 0;
 #X connect 44 0 1 0;
 #X connect 44 0 1 1;
-#X connect 48 0 47 0;
+#X connect 46 2 49 1;
+#X connect 46 2 50 1;
+#X connect 49 0 48 3;
+#X connect 49 1 42 2;
+#X connect 50 0 32 0;
+#X connect 50 1 39 0;
+#X connect 50 2 51 0;
+#X connect 51 0 28 0;
+#X connect 52 4 68 0;
+#X connect 52 5 53 1;
+#X connect 59 0 60 0;
+#X connect 60 0 10 1;
+#X connect 61 0 62 0;
+#X connect 62 0 56 3;
+#X connect 65 0 64 0;
