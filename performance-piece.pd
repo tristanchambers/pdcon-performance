@@ -1,10 +1,10 @@
-#N canvas 119 81 1301 687 12;
+#N canvas 230 123 1301 687 12;
 #X floatatom 117 19 5 0 0 0 - - -, f 5;
 #X obj 351 632 dac~;
 #X obj 310 174 context :Z 8 :a ' # = & x- (?7) & y- (?7) & r (?100
 - 50) 2000 | # = | ' :d 2 :e 2 :h 1 :i 0 0 -6 -2 11 :j 2 16 0 :n '
 cz ' :p -1 :R 63.36 :x 1 3 4 5 :y 1 2 :ID 1;
-#X obj 117 47 cz-synth cz 54 3 1 1 76 83 20 2 1;
+#X obj 117 47 cz-synth cz 54 3 0 3 76 83 20 37 1;
 #X obj 395 220 context :X 9 :Z 12 :a ' # = | ' :d 1 :e 1 :f 1 :h 1
 :i 0 -14 -13 0 -11 0 -10 0 0 :j 3 4 5 :n ' ks ' :p -1 :P 1 :x 2 3 5
 7 :y 1 2 3 :ID 2;
@@ -20,7 +20,7 @@ cz ' :p -1 :R 63.36 :x 1 3 4 5 :y 1 2 :ID 1;
 -4 0 -4 0 0 0 :n ' ks ' :x 1 3 4 6;
 #X obj 271 251 context :X 8 :M 1 :a ' # 13 | ' :b ' # 13 | ' :d 1 :e
 7 :f 5 :h 1 :i 0 -14 0 21 17 0 24 0 :n ' ks ' :p -1 :z 0 :R 63.36 :x
-1 2 3 4 5 6 7 :ID 6;
+1 2 3 5 6 7 :ID 6;
 #X obj 248 392 context :a ' # = | ' :d 0.5 :e 1 :f 1 :i 0 -2 -6 0 1
 :n ' cz ' :x 2 3 5 :ID 7;
 #X obj 259 317 context :d 1.5 :h 1 :j 7 9 0 :p -1 :R 63.36 :y 1 2 :ID
@@ -61,7 +61,7 @@ cz ' :p -1 :R 63.36 :x 1 3 4 5 :y 1 2 :ID 1;
 #X obj 860 440 context :X 17 :Z 12 :a ' # 0 | ' :d 2 :e 1 :f 1 :h 1
 :j 17 0 0 :n ' bass ' :p -1 :R 63.36 :x 1 2 4 6 8 12 13 15 :y 1 2 3
 :ID 17;
-#X msg 612 195 \; c-all stop;
+#X msg 371 73 \; c-all stop;
 #X obj 324 317 context :a ' # = | ' :d 2 :e 1 :f 1 :i 0 0 -9 -4 18
 :n ' cz ' :x 3 4 :ID 18;
 #X obj 443 497 context :M 1 :e 1 :f 1 :h 1 :p -1 :z 0 :R 63.36 :x 1
@@ -85,21 +85,25 @@ waves/lo-conga.wav :x2 0.0003 :y1 0.00012 :y2 0.0003 :y -1 2 5 obj
 47 83 throw~ samples 5 connect 0 0 1 0 5 connect 0 1 2 1 5 connect
 0 2 2 2 5 connect 0 3 2 3 5 connect 0 4 2 4 5 connect 1 1 2 0 5 connect
 4 0 5 0;
-#X obj 1095 474 context :d 0.5 :e 1 :f 1 :i 0 0 23 22 21 :x 3 4 :ID
+#X obj 1057 488 context :d 0.5 :e 1 :f 1 :i 23 22 0 0 21 :x 1 2 :ID
 21;
 #X obj 268 572 catch~ samples;
 #X obj 268 596 *~ 2;
-#X obj 857 123 context :H 38 :X 9 :Y 5 :Z 12 :a ' | ' :c 6 :d 2 :e
-1 :f 1 :i 0 0 0 0 0 0 0 0 20 :n ' congas- ' :I 28 :ID 23 6 obj -35
+#X obj 955 135 context :H 38 :X 9 :Y 5 :Z 12 :a ' | ' :c 6 :d 2 :e
+1 :f 1 :i 0 0 0 0 0 0 0 0 20 :n ' congas- ' :I 28 :ID 25 6 obj -35
 -93 list split 1 11 obj -1 -65 ols \$1 inlet outlet-x outlet-y mouse
 settings cutsom 9 obj 361 -103 presets \$1 :x :y :d :m 15 obj 0 19
 content :l waves/uhu.wav :x2 0.002 :y1 0.0008 :y2 0.002 :y -1 2 5 obj
 47 83 throw~ samples 5 connect 0 0 1 0 5 connect 0 1 2 1 5 connect
 0 2 2 2 5 connect 0 3 2 3 5 connect 0 4 2 4 5 connect 1 1 2 0 5 connect
 4 0 5 0;
-#X obj 524 106 context :X 20 :a ' -- c24 stop - | ' :b ' \\\; \\\;
-\\\; \\\; ' :d 1.5 :e 1 :f 1 :h 1 :j 7 9 0 :p -1 :P 1 :x 2 :y 1 2 :ID
-24;
+#X obj 580 89 context :H 61 :X 20 :a ' -- c24 stop - | ' :b ' | ' :d
+1.5 :e 2 :f 1 :h 1 :i 0 0 0 20 0 0 20 0 0 0 0 0 0 0 0 0 0 0 0 0 :j
+7 9 0 :p -1 :P 1 :x 2 4 :y 1 2 :ID 24 6 obj -35 -93 list split 1 11
+obj -1 -65 ols \$1 inlet outlet-x outlet-y mouse settings cutsom 10
+obj 361 -103 presets \$1 :x :y :d :a :b 5 connect 0 0 1 0 5 connect
+0 1 2 1 5 connect 0 2 2 2 5 connect 0 3 2 3 5 connect 0 4 2 4 5 connect
+1 1 2 0;
 #X obj 20 269 print to;
 #X obj 20 245 receive c24;
 #X msg 904 -12 context :H 36 :X 9 :Y 5 :Z 12 :a ' | ' :c 6 :d 0.29
@@ -110,14 +114,16 @@ waves/slap.aiff :x2 0.00029 :y1 0.000116 :y2 0.00029 :y -1 2 5 obj
 47 83 throw~ samples 5 connect 0 0 1 0 5 connect 0 1 2 1 5 connect
 0 2 2 2 5 connect 0 3 2 3 5 connect 0 4 2 4 5 connect 1 1 2 0 5 connect
 4 0 5 0;
-#X obj 734 204 context :H 36 :X 9 :Y 5 :Z 12 :a ' | ' :c 6 :d 0.29
-:e 1 :f 1 :i 0 0 0 0 0 0 0 0 20 :n ' congas- ' :ID 24 6 obj -35 -93
-list split 1 11 obj -1 -65 ols \$1 inlet outlet-x outlet-y mouse settings
-cutsom 9 obj 361 -103 presets \$1 :x :y :d :m 15 obj 0 19 content :l
-waves/slap.aiff :x2 0.00029 :y1 0.000116 :y2 0.00029 :y -1 2 5 obj
-47 83 throw~ samples 5 connect 0 0 1 0 5 connect 0 1 2 1 5 connect
-0 2 2 2 5 connect 0 3 2 3 5 connect 0 4 2 4 5 connect 1 1 2 0 5 connect
-4 0 5 0;
+#X obj 728 215 context :H 36 :X 11 :Y 5 :Z 12 :a ' | ' :c 6 :d 2 :e
+1 :f 1 :i 0 0 0 0 0 0 0 0 20 :n ' congas- ' :ID 26 6 obj -35 -93 list
+split 1 11 obj -1 -65 ols \$1 inlet outlet-x outlet-y mouse settings
+cutsom 9 obj 361 -103 presets \$1 :x :y :d :m 17 obj 15 19 content
+:l waves/slap.aiff :x1 0.00025 :x2 0.002 :y1 0.0008 :y2 0.002 :y -1
+2 5 obj 47 83 throw~ samples 4 obj 0 -20 mover 5 connect 0 0 1 0 5
+connect 0 1 2 1 5 connect 0 2 2 2 5 connect 0 3 2 3 5 connect 0 4 2
+4 5 connect 1 1 2 0 5 connect 4 0 5 0;
+#X obj 766 149 context :M 1 :e 1 :f 1 :h 1 :p -1 :z 0 :P 1 :x 1 2 :ID
+20;
 #X connect 0 0 3 0;
 #X connect 2 0 16 1;
 #X connect 2 2 16 2;
@@ -145,3 +151,5 @@ waves/slap.aiff :x2 0.00029 :y1 0.000116 :y2 0.00029 :y -1 2 5 obj
 #X connect 44 0 1 0;
 #X connect 44 0 1 1;
 #X connect 48 0 47 0;
+#X connect 51 0 50 3;
+#X connect 51 1 42 2;
