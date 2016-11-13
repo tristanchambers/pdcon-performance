@@ -1,16 +1,21 @@
-#N canvas 0 93 850 300 10;
+#N canvas 87 556 850 300 10;
 #X obj 210 52 netreceive 3000;
-#X obj 128 91 print;
+#X obj 142 124 print;
 #X obj 95 91 t b;
 #X obj 95 118 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 210 86 route a b c;
 #X obj 210 151 send instrument-a;
 #X obj 234 181 send instrument-b;
 #X obj 260 211 send instrument-c;
+#X obj 290 241 send start;
+#X obj 335 118 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 210 86 route a b c start;
 #X connect 0 0 2 0;
-#X connect 0 0 4 0;
+#X connect 0 0 9 0;
 #X connect 2 0 3 0;
-#X connect 4 0 5 0;
-#X connect 4 1 6 0;
-#X connect 4 2 7 0;
+#X connect 9 0 4 0;
+#X connect 9 1 5 0;
+#X connect 9 2 6 0;
+#X connect 9 3 7 0;
+#X connect 9 3 8 0;
