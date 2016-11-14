@@ -10,6 +10,8 @@
 #X msg 73 99 send a \$1;
 #X msg 153 99 send b \$1;
 #X msg 233 99 send c \$1;
+#X obj 165 148 receive startbang;
+#X msg 165 170 send start;
 #X connect 0 0 1 0;
 #X connect 1 0 8 0;
 #X connect 3 0 2 0;
@@ -20,3 +22,5 @@
 #X connect 8 0 2 0;
 #X connect 9 0 2 0;
 #X connect 10 0 2 0;
+#X connect 11 0 12 0;
+#X connect 12 0 2 0;
