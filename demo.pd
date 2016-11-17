@@ -1,20 +1,22 @@
-#N canvas 65 53 1301 715 10;
-#X obj 117 109 context :Z 7 :a ' %> s = | ' :d 8 :i -1 -2 -1 -2 0 :n
-' ts time ' :x 1 2 3 4 :ID 2;
-#X obj 194 109 context :Z 7 :a ' %> s = | ' :d 8 :i -2 -2 -1 -3 0 :n
-' ts time ' :x 1 2 3 4 :ID 3;
-#X obj 158 43 context :M 1 :d 8 :h 1 :i 2 2 2 3 1 :n ' time ' :p -1
+#N canvas 193 91 1063 687 10;
+#X obj 167 109 context :Z 7 :a ' :o = :s | ' :d 8 :e 1 :f 1 :i -1 -2
+-1 -2 0 :n ' ts time ' :x 1 2 3 4 :ID 2;
+#X obj 244 109 context :Z 7 :a ' :o = :s | ' :d 8 :e 1 :f 1 :i -2 -2
+-1 -3 0 :n ' ts time ' :x 1 2 3 4 :ID 3;
+#X obj 208 43 context :M 1 :d 8 :h 1 :i 2 2 2 3 1 :n ' time ' :p -1
 :P 1 :x 1 2 3 4 5 :ID 1;
-#X obj 127 194 context :X 10 :Y 7 :Z 13 :M 1 :a ' | ' :b ' -o :o (!s)
-:s | ' :i 5 6 7 8 0 0 0 0 0 0 :n ' ts- ' :p -1 :P -1 :x 1 2 3 4 :ID
-4;
-#X obj 79 301 context :M 1 :i 10 11 12 0 0 :z 0 :x 1 2 3 :ID 5;
-#X obj 149 301 context :M 1 :e 1 :f 1 :i 9 16 17 0 0 0 :z 0 :x 1 2
-3 :ID 6;
-#X obj 219 301 context :M 1 :d 1.125 :i 19 21 22 0 0 :z 0 :x 1 2 3
+#X obj 177 194 context :X 10 :Y 7 :Z 13 :M 1 :a ' *.* ' :b ' *.* '
+:e 1 :f 1 :h 0 :i 5 6 7 8 0 0 0 0 0 0 :n ' ts- ' :p -1 :z 0 :P -1 :x
+1 2 3 4 :ID 4 :A 1;
+#X obj 129 301 context :M 1 :e 1 :f 1 :i 10 11 12 0 0 :z 0 :x 1 2 3
+:ID 5;
+#X obj 199 301 context :M 1 :e 1 :f 1 :i 9 16 17 0 0 :z 0 :x 1 2 3
+:ID 6;
+#X obj 269 301 context :M 1 :d 1.125 :i 19 21 22 0 0 :z 0 :x 1 2 3
 :ID 7;
-#X obj 291 301 context :M 1 :i 23 0 0 0 0 :z 0 :x 1 2 3 :ID 8;
-#X obj 231 469 context :X 9 :Z 23 :a ' r (¬ - 1 *20) | ' :c 3 :d 1
+#X obj 341 301 context :M 1 :e 1 :f 1 :i 23 24 25 0 0 :z 0 :x 1 2 3
+:ID 8;
+#X obj 281 459 context :X 9 :Z 23 :a ' r (¬ - 1 *20) | ' :c 3 :d 1
 :h 1 :j 14 15 0 :n ' snare ' :p -1 :R 63.36 :x 3 4 7 :y 1 2 :ID 9;
 #N canvas 401 162 450 300 snare 0;
 #X obj 191 248 outlet~;
@@ -34,8 +36,8 @@
 #X connect 5 0 6 0;
 #X connect 6 0 4 1;
 #X connect 6 0 7 0;
-#X restore 963 505 pd snare;
-#X obj -12 470 context :H 60 :X 17 :Y 6 :Z 31 :a ' u (~ * 10) & d (¬
+#X restore 1333 505 pd snare;
+#X obj 38 460 context :H 60 :X 17 :Y 6 :Z 31 :a ' u (~ * 10) & d (¬
 - 1 *20) | ' :c 1 :d 2 :e 1 :f 1 :i 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 11 :n ' bd ' :x 1 5 9 11 14 :ID 10 6 obj -35 -93 list split 1 11 obj
 -1 -65 ols \$1 inlet outlet-x outlet-y mouse settings cutsom 9 obj
@@ -43,9 +45,9 @@
 0.000933333 :y2 0.0019 4 obj 0 -20 mover 5 connect 0 0 1 0 5 connect
 0 1 2 1 5 connect 0 2 2 2 5 connect 0 3 2 3 5 connect 0 4 2 4 5 connect
 1 1 2 0;
-#X obj 1110 381 s~ pitch;
-#X obj 1110 191 r~ pitch;
-#X obj -12 557 context :H 62 :X 17 :Y 6 :Z 22 :a ' u (~ * 10) & d (¬
+#X obj 1530 381 s~ pitch;
+#X obj 1530 191 r~ pitch;
+#X obj 38 547 context :H 62 :X 17 :Y 6 :Z 22 :a ' u (~ * 10) & d (¬
 - 1 *20) | ' :c 1 :d 2 :e 1 :f 1 :i 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 10 :n ' bd ' :x 1 3 5 9 11 13 14 :ID 11 6 obj -35 -93 list split 1
 11 obj -1 -65 ols \$1 inlet outlet-x outlet-y mouse settings cutsom
@@ -53,9 +55,9 @@
 :y1 0.000933333 :y2 0.0019 4 obj 0 -20 mover 5 connect 0 0 1 0 5 connect
 0 1 2 1 5 connect 0 2 2 2 5 connect 0 3 2 3 5 connect 0 4 2 4 5 connect
 1 1 2 0;
-#X obj 1109 217 osc~;
-#X obj 771 528 f-env snare 100 82 5.24807 8 131 0 1 1 0 30;
-#X obj -13 644 context :H 63 :X 17 :Y 6 :Z 22 :a ' u (~ * 10) & d (¬
+#X obj 1529 217 osc~;
+#X obj 1141 528 f-env snare 100 82 5.24807 8 131 0 1 1 0 30;
+#X obj 37 634 context :H 63 :X 17 :Y 6 :Z 22 :a ' u (~ * 10) & d (¬
 - 1 *20) | ' :c 1 :d 2 :e 1 :f 1 :i 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 11 :n ' bd ' :x 1 2 3 4 5 7 11 14 :ID 12 6 obj -35 -93 list split 1
 11 obj -1 -65 ols \$1 inlet outlet-x outlet-y mouse settings cutsom
@@ -63,16 +65,16 @@
 :y1 0.000933333 :y2 0.0019 4 obj 0 -20 mover 5 connect 0 0 1 0 5 connect
 0 1 2 1 5 connect 0 2 2 2 5 connect 0 3 2 3 5 connect 0 4 2 4 5 connect
 1 1 2 0;
-#X obj 346 533 context :X 9 :Z 23 :a ' r (¬ - 1 *20) | ' :c 3 :d 1
+#X obj 396 523 context :X 9 :Z 23 :a ' r (¬ - 1 *20) | ' :c 3 :d 1
 :j 2 0 0 :n ' snare ' :p -1 :P -1 :x 3 4 5 7 :ID 14;
-#X obj 231 533 context :X 9 :Z 23 :a ' r (¬ - 1 *20) | ' :c 3 :d 1
+#X obj 281 523 context :X 9 :Z 23 :a ' r (¬ - 1 *20) | ' :c 3 :d 1
 :j 2 0 0 :n ' snare ' :p -1 :P -1 :x 3 7 :ID 15;
-#X obj 346 468 context :X 9 :Z 23 :a ' r (¬ - 1 *20) | ' :c 3 :d 1
+#X obj 396 458 context :X 9 :Z 23 :a ' r (¬ - 1 *20) | ' :c 3 :d 1
 :h 1 :j 14 15 0 :n ' snare ' :p -1 :P 1 :x 2 3 5 7 :y 1 2 :ID 16;
-#X obj 233 592 context :X 17 :Z 23 :a ' r (¬ - 1 *20) | ' :c 3 :d
+#X obj 283 582 context :X 17 :Z 23 :a ' r (¬ - 1 *20) | ' :c 3 :d
 2 :j 2 0 0 :n ' snare ' :p -1 :P -1 :x 1 2 3 4 5 7 10 13 :ID 17;
-#X msg 549 271 \; c-all stop;
-#X obj 508 606 context :H 38 :X 9 :Y 5 :Z 12 :a ' | ' :c 6 :d 0.32
+#X msg 1339 -2 \; c-all stop;
+#X obj 558 596 context :H 38 :X 9 :Y 5 :Z 12 :a ' | ' :c 6 :d 0.32
 :e 1 :f 1 :i 0 0 0 0 0 0 0 0 20 :n ' congas- ' :x 1 :ID 18 6 obj -35
 -93 list split 1 11 obj -1 -65 ols \$1 inlet outlet-x outlet-y mouse
 settings cutsom 9 obj 361 -103 presets \$1 :x :y :d :m 15 obj 0 19
@@ -80,37 +82,34 @@ content :l waves/open-conga.wav :x2 0.00032 :y1 0.000128 :y2 0.00032
 :y -1 2 5 obj 47 83 throw~ samples 5 connect 0 1 2 1 5 connect 0 2
 2 2 5 connect 0 3 2 3 5 connect 0 4 2 4 5 connect 1 1 2 0 5 connect
 4 0 5 0;
-#X obj 515 424 context :M 1 :a ' \\\; \\\; \\\; \\\; ' :b ' (? 4 +
+#X obj 565 414 context :M 1 :a ' \\\; \\\; \\\; \\\; ' :b ' (? 4 +
 2) | ' :c 19 :d 0.5 :h 1 :i 19 19 0 21 18 :n ' level ' :p -1 :D 8 :E
 1 :R 63.36 :x 1 2 3 4 5 :ID 19;
-#X obj 625 605 context :H 36 :X 9 :Y 5 :Z 12 :a ' | ' :c 6 :d 0.25
+#X obj 675 595 context :H 36 :X 9 :Y 5 :Z 12 :a ' | ' :c 6 :d 0.25
 :e 1 :f 1 :i 0 0 0 0 0 0 0 0 18 :n ' congas- ' :ID 20 6 obj -35 -93
 list split 1 11 obj -1 -65 ols \$1 inlet outlet-x outlet-y mouse settings
 cutsom 9 obj 361 -103 presets \$1 :x :y :d :m 15 obj 0 19 content :l
 waves/lo-conga.wav :x2 0.00025 :y1 0.0001 :y2 0.00025 :y -1 2 5 obj
 47 83 throw~ samples 5 connect 0 1 2 1 5 connect 0 2 2 2 5 connect
 0 3 2 3 5 connect 0 4 2 4 5 connect 1 1 2 0 5 connect 4 0 5 0;
-#X obj 586 425 context :M 1 :a ' \\\; \\\; \\\; \\\; ' :b ' (? 4 +
+#X obj 636 415 context :M 1 :a ' \\\; \\\; \\\; \\\; ' :b ' (? 4 +
 2) | ' :c 19 :d 0.5 :h 1 :i 19 0 21 21 20 :n ' level ' :p -1 :D 8 :E
 1 :R 63.36 :x 1 2 3 4 5 :ID 21;
-#X obj 510 516 context :X 17 :Z 18 :a ' \\\; \\\; \\\; \\\; \\\; \\\;
+#X obj 560 506 context :X 17 :Z 18 :a ' \\\; \\\; \\\; \\\; \\\; \\\;
 \\\; \\\; \\\; \\\; \\\; \\\; \\\; \\\; \\\; \\\; \\\; \\\; ' :c 19
 :d 2 :n ' congas ' :x 1 2 3 4 5 7 :ID 22;
-#X obj 513 31 context :X 9 :Z 11 :a ' # = & h 10 | ' :c 16 :d 2 :h
-1 :i -3 0 -5 0 0 -9 0 0 24 :j 24 25 0 :n ' ks ' :p -1 :P 1 :x 1 3 6
-:y 1 2 :ID 23;
-#X obj 923 47 ks2 ks 36 5.01187 0 71 0 39 0 91 0 39.8107 0 4.16869
-1.5 53 54 0 88;
-#X obj 513 92 context :X 17 :Z 18 :a ' # = & h -10 | ' :c 16 :d 2 :i
--14 -14 -13 -11 -11 0 -13 0 -14 0 -13 -11 0 -11 0 0 23 :n ' ks ' :F
-85 :x 2 3 5 7 9 11 12 14 :ID 24;
-#X obj 513 159 context :X 17 :Z 18 :a ' # = & h -10 | ' :c 16 :d 2
-:i -13 -14 -13 -11 -11 0 -10 0 -11 0 -10 -11 0 -7 0 0 23 :n ' ks '
-:F 85 :x 1 2 3 5 7 9 11 12 14 :ID 25;
-#X obj 549 306 scaler locrian C 2;
-#X obj 1020 464 f-env bass 1.65959 81 22.9087 6 382 0 3 1 1 77;
-#X obj 1020 386 receive bass-;
-#X obj 1020 409 t b f;
+#X obj 563 31 context :X 9 :Z 15 :a ' # = & d 10 | ' :c 16 :d 2 :e
+1 :f 1 :h 1 :i -9 -10 -9 -12 0 -7 0 0 24 :j 24 25 0 :n ' ks ' :p -1
+:P 1 :x 1 2 4 6 :ID 23;
+#X obj 563 92 context :X 17 :Z 18 :a ' # = & d -10 | ' :c 16 :d 2 :e
+1 :f 1 :i -9 -10 -16 -11 -11 0 -10 0 -12 0 -9 -11 0 -10 0 0 23 :n '
+ks ' :F 85 :x 1 2 5 7 9 11 12 14 :ID 24;
+#X obj 563 159 context :X 17 :Z 18 :a ' # = & d -10 | ' :c 16 :d 2
+:e 1 :f 1 :i -13 -14 -13 -11 -11 0 -10 0 -11 0 -10 -11 0 -7 0 0 23
+:n ' ks ' :F 85 :x 1 2 3 5 7 9 11 12 14 :ID 25;
+#X obj 1390 464 f-env bass 1.65959 81 22.9087 6 382 0 3 1 1 77;
+#X obj 1390 416 receive bass-;
+#X obj 1390 439 t b f;
 #N canvas 65 81 450 300 bass 0;
 #X obj 238 53 inlet;
 #X obj 244 205 outlet~;
@@ -132,47 +131,59 @@ waves/lo-conga.wav :x2 0.00025 :y1 0.0001 :y2 0.00025 :y -1 2 5 obj
 #X connect 7 0 8 0;
 #X connect 8 0 1 0;
 #X coords 0 -1 1 1 85 15 1 100 100;
-#X restore 1138 437 pd bass;
-#X obj 1126 678 dac~;
-#X obj 707 244 2f-env bd pitch 20.893 57 26.3027 5 356 0 1 1 0 38 3.16228
-8 15.1356 72 3 123 33 510;
-#X text 261 77 TIMING: THESE THREE CONTEXTS DEFINE A REPEATING PATTERN
+#X restore 1508 437 pd bass;
+#X obj 1496 678 dac~;
+#X obj 1127 244 2f-env bd pitch 20.893 57 26.3027 5 356 0 1 1 0 38
+3.16228 8 15.1356 72 3 123 33 510;
+#X text 311 77 TIMING: THESE THREE CONTEXTS DEFINE A REPEATING PATTERN
 WHICH FUNCTIONS AS A MUSICAL STRUCTURE, f 21;
-#X text 260 226 CONTROL: THESE CONTEXT RELAYS THAT PATTERN TOWARDS
+#X text 310 226 CONTROL: THESE CONTEXT RELAYS THAT PATTERN TOWARDS
 SPECIFIED CONTEXT INSTRUMENTS, f 29;
-#X text 73 360 BASS DRUM;
-#X text 160 361 SNARE;
-#X text 225 363 CONGOS;
-#X text 300 363 SYNTH;
-#X text 10 420 THESE CONTEXTS HOLD THE BASS DRUM PATTERNS. THE ARRAYS
+#X text 123 360 BASS DRUM;
+#X text 210 361 SNARE;
+#X text 275 363 CONGOS;
+#X text 350 363 SYNTH;
+#X text 60 410 THESE CONTEXTS HOLD THE BASS DRUM PATTERNS. THE ARRAYS
 CONTROL THE SUSTAIN LEVEL., f 28;
-#X text 238 416 THESE CONTEXTS HOLD THE SNARE PATTERN. THE DECAY IS
+#X text 288 406 THESE CONTEXTS HOLD THE SNARE PATTERN. THE DECAY IS
 DEFINED BY THE SPACE BETWEEN ONE BEAT AND THE NEXT., f 36;
-#X text 507 584 THESE CONTEXTS HOLD THE CONGA SAMPLES;
-#X text 509 388 THESE CONTEXTS DEFINE A RANDOM CONGA PATTERN, f 28
+#X text 557 574 THESE CONTEXTS HOLD THE CONGA SAMPLES;
+#X text 559 378 THESE CONTEXTS DEFINE A RANDOM CONGA PATTERN, f 28
 ;
-#X text 510 497 THIS CONTEXT HOLDS A CONGA FILL;
-#X text 629 46 THESE CONTEXTS HOLD THE MELODY. NOTES ARE REPRESENTED
+#X text 560 487 THIS CONTEXT HOLDS A CONGA FILL;
+#X text 679 46 THESE CONTEXTS HOLD THE MELODY. NOTES ARE REPRESENTED
 BY THE NUMBERS IN THE TOGGLES., f 44;
-#X obj 706 381 throw~ e-out;
-#X obj 772 664 throw~ e-out;
-#X obj 1019 649 throw~ e-out;
-#X obj 922 193 throw~ e-out;
-#X obj 1126 653 catch~ e-out;
-#X obj 1206 654 catch~ samples;
+#X obj 1128 380 throw~ e-out;
+#X obj 1142 664 throw~ e-out;
+#X obj 1389 649 throw~ e-out;
+#X obj 1342 193 throw~ e-out;
+#X obj 1496 653 catch~ e-out;
+#X obj 1576 654 catch~ samples;
+#X obj 221 12 bng 20 250 50 0 empty empty START 24 10 0 10 -262144
+-1 -1;
+#N canvas 65 89 450 300 stop 0;
+#X obj 100 100 bng 20 250 50 0 empty empty STOP 24 10 0 10 -262144
+-1 -1;
+#X msg 100 140 \; c-all stop;
+#X connect 0 0 1 0;
+#X coords 0 -1 1 1 20 20 2 100 100;
+#X restore 281 11 pd stop;
+#X obj 1341 55 cz-synth ks 55 1.5 1 4 56 82 0 48 1;
+#X obj 1339 33 scaler blues major C 2;
 #X connect 9 0 15 2;
 #X connect 12 0 14 0;
-#X connect 14 0 37 2;
-#X connect 15 0 51 0;
-#X connect 28 0 53 0;
-#X connect 32 0 52 0;
-#X connect 33 0 34 0;
-#X connect 34 0 32 0;
-#X connect 34 1 35 0;
-#X connect 35 0 32 2;
-#X connect 37 0 50 0;
-#X connect 37 1 11 0;
-#X connect 54 0 36 0;
-#X connect 54 0 36 1;
-#X connect 55 0 36 1;
-#X connect 55 0 36 0;
+#X connect 14 0 35 2;
+#X connect 15 0 49 0;
+#X connect 30 0 50 0;
+#X connect 31 0 32 0;
+#X connect 32 0 30 0;
+#X connect 32 1 33 0;
+#X connect 33 0 30 2;
+#X connect 35 0 48 0;
+#X connect 35 1 11 0;
+#X connect 52 0 34 0;
+#X connect 52 0 34 1;
+#X connect 53 0 34 1;
+#X connect 53 0 34 0;
+#X connect 54 0 2 1;
+#X connect 56 0 51 0;
